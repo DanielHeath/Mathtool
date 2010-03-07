@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta name="language" content="en-US"/>
+    <meta name="description" content="MathML Browser Test (Presentation Markup)"/>
+    <meta name="keywords" content="MathML Browser Test (Presentation Markup)"/>
+
+    <title>MathML Browser Test (Presentation Markup)</title>
+    
+<script src="jquery-1.4.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  Equations = []
+  Equations.multiply = function(value) { alert(value);};
+</script>
+    <style type="text/css">
+      ul { 
+        list-style-type: none 
+      }
+      ul#equations li {
+        border: solid 1px blue;
+      }
+    </style>
+
+</head>
+
+  <body>
+    <h1>MathML Browser Test (Presentation Markup)</h1>
+    <div>
+      Modify both sides by:
+      <ul>
+        <li>
+          Multiplying by <input id="multiply_by" type="text"/>
+          <input type="submit" value="Go!" onclick="Equations.multiply($('#multiply_by')[0].value)"/>
+        </li>
+      </ul>
+    </div>
+    <ul id="equations">
+      <li id="current_equation">
+        <math mode="display" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow>
+            <apply class="lhs">
+              <mi>x</mi>
+            </apply>
+            <mo>=</mo>
+            <apply class="rhs">
+              <mfrac >
+                <mrow class="term" >
+                  <mo form="prefix">−<!-- &minus; --></mo>
+                  <mi>b</mi>
+                  <mo>±<!-- &PlusMinus; --></mo>
+                  <msqrt>
+                    <msup>
+                      <mi>b</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>−<!-- &minus; --></mo>
+                    <mn>4</mn>
+                    <mo>⁢<!-- &InvisibleTimes; --></mo>
+                    <mi>a</mi>
+                    <mo>⁢<!-- &InvisibleTimes; --></mo>
+                    <mi>c</mi>
+                  </msqrt>
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                  <mo>⁢<!-- &InvisibleTimes; --></mo>
+                  <mi>a</mi>
+                </mrow>
+              </mfrac>
+            </apply>
+          </mrow>
+        </math>
+      </li>
+    </ul>
+  </body>
+</html>
